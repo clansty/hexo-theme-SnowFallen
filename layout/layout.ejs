@@ -1,19 +1,24 @@
 ﻿<!DOCTYPE html>
-
+<!-- μ'sic Forever??? -->
 <%- partial('partials/banner') %>
 <html>
 	<head>
-		
+		<!-- 所有head内容 -->
 		<%- partial('partials/head') %>
 	</head>
 	<body>
+		<!-- 加载的旋转 -->
+		<%- partial('partials/loading') %>
+		<!-- 顶栏 -->
+		<%- partial('partials/menu') %>
 		
-		<%- partial('partials/loading) %>
-		
-		<%- partial('partials/menu) %>
-		
+		<div class="pjax-container">
+		<%- partial('partials/pjax') %>
+		<!-- 开始分开了 -->
 		<%- body %>
-		
-		
+		<%- partial('partials/footer') %>
+		<%- partial('script') %>
+		</div>
+	</body>
 		
 </html>

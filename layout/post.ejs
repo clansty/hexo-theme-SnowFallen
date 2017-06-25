@@ -1,17 +1,25 @@
-<head>
-<%- partial('partial/head') %>
-{{ghost_head}}
-</head>
-<body>
-{{> "loading"}}
-{{> "menu"}}
-<div class="pjax-container">
-{{> "pjax1"}}
-{{> "article"}}
-{{> "footer"}}
-{{ghost_foot}}
-{{> "script"}}
-</div>
-</body>
-</html>
-{{/post}}
+	<div class="row" id="content">
+		<div class="container">
+			<div class="col s12 m12" style="margin:0 auto">
+				<div id="art-container">
+					<div class="article-body">
+						<div class="article-content">
+							{{content}}
+						</div>
+					</div>
+					<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: "{{@blog.url}}", 
+  sourceId: "sf{{id}}js{{id}}jf66",
+  productKey: "648aa2c2f8f34f559c5938be17784ba6",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+				</div>
+			</div>
+		</div>
+	</div>
