@@ -6,28 +6,42 @@
 					<div class="article-body">
 						<div class="article-tag">
 							<div class="article-title">
-								<a href="{{url}}">
-								<h2>{{title}}</h2>
+								<a href="<%- url_for(post.path) %>">
+								<h2><%= post.title %></h2>
 								</a>
 								<div class="link-border">
 								</div>
 							</div>
 							<div class="left article-info">
-           <p><i class="fa fa-tags"></i>{{tags}}</p>
-           <p>{{date format="DD MMMM YYYY"}}</p>
+           <p><i class="fa fa-tags"></i><%- list_tags(post.tags) %></p>
+           <p><%- date(post.date) %></p>
           </div>
 							</div>
 						<div class="article-background" style="background-image:url()">
 						</div>
 						<div class="article-content">
-							{{excerpt words="26"}}
-							<p>
-								<a href="{{url}}">阅读全文...</a>
-							</p>
+							<% if (post.excerpt){ %>
+								<%- post.excerpt %>
+								<p>
+									<a href="<%- url_for(post.path) %>">阅读全文...</a>
+								</p>
+							<% } else { %>
+								<%- post.content %>
+							<% } %>
 						</div>
 					</div>
-					{{/foreach}}
-					<p>{{pagination}}</p>
+					<% }) %>
+					<% if (page.total > 1){ %>
+						<p>
+						<!-- nav id="page-nav" -->
+						<%- paginator({
+							prev_text: "&laquo; __('prev')",
+							next_text: "__('next') &raquo;"
+						}) %>
+						</p>
+						<!-- /nav ->
+					<% } %>
+					<!-- p>{{pagination}}</p -->
 				</div>
 			</div>
 		</div>

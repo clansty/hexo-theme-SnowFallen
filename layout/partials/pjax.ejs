@@ -3,6 +3,12 @@
 			<div class="banner-container">
 				<div class="banner-border-top">
 				</div>
+				<%
+					var title = page.title;
+					if (is_home()){
+						title = config.title;
+					} 
+				%>
 				<h1 id="big-title"><%= title %></h1>
 				<!-- h3 id="big-description">{{@blog.description}}</h3 -->
 				<div class="banner-border-bottom">
