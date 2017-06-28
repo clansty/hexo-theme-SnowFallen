@@ -1,3 +1,16 @@
-gentie: 648aa2c2f8f34f559c5938be17784ba6
-baidu_analytics: 451386f00fb513bb7cae33dd13d01d0c
-google_analytics: UA-101764992-1
+# SnowFallen 配置文件
+
+# 网易云跟帖的 key
+gentie: 
+# 百度统计码
+baidu_analytics: 
+# Google 统计码
+google_analytics: 
+
+# 强烈推荐使用 Gitment
+gitment:
+    enable: false # 改为 true 来启用
+    owner: # 存储评论的 repo 的所有人
+    repo: # 存储评论的 repo 的名字
+    client_id: # GitHub API Client ID
+    client_secret: # GitHub API Client secret
