@@ -1,4 +1,6 @@
 # SnowFallen 配置文件
+# https://gao4.pw
+# https://github.com/MoeYi/Hexo-Theme-SnowFallen
 
 # 网易云跟帖的 key
 gentie: 
@@ -14,3 +16,8 @@ gitment:
     repo: # 存储评论的 repo 的名字
     client_id: # GitHub API Client ID
     client_secret: # GitHub API Client secret
+
+# 封面图设置
+banner: https://o55ydpgd4.qnssl.com/assets/images/banner.jpg# 最上面封面图的 URL
+base_url: https://o55ydpgd4.qnssl.com/assets/images/# 下面按顺序展示的文章封面的文件夹
+base_number: 10# 文章封面图总数加一
