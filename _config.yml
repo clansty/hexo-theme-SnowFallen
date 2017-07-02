@@ -18,6 +18,6 @@ gitment:
     client_secret: # GitHub API Client secret
 
 # 封面图设置
-banner: https://o55ydpgd4.qnssl.com/assets/images/banner.jpg# 最上面封面图的 URL
-base_url: https://o55ydpgd4.qnssl.com/assets/images/# 下面按顺序展示的文章封面的文件夹
-base_number: 10# 文章封面图总数加一
+banner: https://o55ydpgd4.qnssl.com/assets/images/banner.jpg # 最上面封面图的 URL
+base_url: https://o55ydpgd4.qnssl.com/assets/images/ # 下面按顺序展示的文章封面的文件夹
+base_number: 10 # 文章封面图总数加一
