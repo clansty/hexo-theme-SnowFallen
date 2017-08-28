@@ -1,10 +1,31 @@
 	<script src="/js/jquery-2.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 	<script src="/js/highlight.min.js"></script>
 	<script src="/js/depend.js"></script>
 	<script src="/js/index.js"></script>
-
+	<script src="/js/birth.js"></script>
+	<!-- 页面点击小红心 -->
+	<% if(theme.love){ %>
+<script type="text/javascript" src="/js/love.js"></script>
+	<% } %>
+	<% if(theme.bdpush){ %>
+	<script>
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+	</script>
+	<% } %>
 	<style>
 body{height:200px}
 	</style>
 	<script type="text/javascript">hljs.initHighlightingOnLoad(),setTimeout("loadFinish()",1e3),$(".small-mode").removeClass("small-mode").addClass("fullscreen-mode"),$("[class=article-background]").each(function(s){s++,<%= theme.base_number %>==s&&(s=1),$(this).css("background-image","url(<%= theme.base_url %>".split("?")[0]+s+".jpg)")});</script>
-
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=63057600" charset="UTF-8"></script>

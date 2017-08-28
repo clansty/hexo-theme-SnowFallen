@@ -3,19 +3,37 @@
 # https://github.com/MoeYi/Hexo-Theme-SnowFallen
 
 # 网易云跟帖的 key
-gentie: 
+gentie:
 # 百度统计码
-baidu_analytics: 
+baidu_analytics:
 # Google 统计码
-google_analytics: 
+google_analytics:
 
-# 强烈推荐使用 Gitment
+# 在每个页面底部显示一言
+hitokoto: true
+
+# 顶部加载进度条
+loadbar: false
+
+# 点击出现小心心
+love: false
+
+# 浏览器网页 logo
+favicon: /favicon.ico
+
+# Gitment
 gitment:
     enable: false # 改为 true 来启用
     owner: # 存储评论的 repo 的所有人
     repo: # 存储评论的 repo 的名字
     client_id: # GitHub API Client ID
     client_secret: # GitHub API Client secret
+
+# 百度站长自动推送
+bdpush: false
+
+# 主题色
+color: 1E90FF
 
 # 封面图设置
 banner: https://o55ydpgd4.qnssl.com/assets/images/banner.jpg # 最上面封面图的 URL

@@ -3,26 +3,29 @@
 <%- partial('partials/banner') %>
 <html>
 	<head>
-	 <%- partial('partials/forcenohtml') %>
+<meta name="theme-color" content="#<%= theme.color %>" />
+	 
 		<!-- 所有head内容 -->
 		<%- partial('partials/head') %>
 	</head>
 	<body>
 		<!-- 加载的旋转 -->
 		<%- partial('partials/loading') %>
-		<!-- 顶栏 -->
-		<%- partial('partials/menu') %>
-		
-		<div class="pjax-container">
-		<%- partial('partials/pjax') %>
-		<!-- 开始分开了 -->
-		<%- body %>
-		<%- partial('partials/footer') %>
+		<% if(page.static){ %>
+<%- partial('partials/static') %>
+<% }else{ %>
+<%- partial('partials/simple') %>
+<% } %>
 		<%- partial('partials/script') %>
 		</div>
 		
 		<!-- 统计 -->
 		<%- partial('partials/analytics') %>
+
+
+
+		<!-- Live2d -->
+		<%- live2d() %>
 	</body>
 		
 </html>
