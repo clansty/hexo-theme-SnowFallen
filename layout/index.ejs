@@ -13,7 +13,7 @@
 								</div>
 							</div>
 							<div class="left article-info">
-           <p><i class="fa fa-tags"></i><%- list_tags(post.tags) %></p>
+           <!-- p><i class="fa fa-tags"></i><%- list_tags(post.tags) %></p -->
            <p><%- date(post.date) %></p>
           </div>
 							</div>
@@ -28,6 +28,9 @@
 							<% } else { %>
 								<% var content = strip_html(post.content) %>
 								<%- content.substring(0, 65) %>
+								<p>
+									<a href="<%- post.path %>">阅读全文...</a>
+								</p>
 							<% } %>
 						</div>
 					</div>
@@ -36,12 +39,14 @@
 						<p>
 						<nav class="pagination">
 						<!-- nav id="page-nav" -->
-						<%- paginator({
-							
-        prev_text: '<i class="fa fa-angle-left"></i>',
-        next_text: '<i class="fa fa-angle-right"></i>',
-        mid_size: 1
-						}) %>
+						
+						
+						
+						<%- partial('partials/pagination') %>
+
+						
+						
+						
 						</p>
 						</nav>
 					<% } %>
